@@ -1,12 +1,16 @@
 /***********************************************************************************************
  Script Name   : Recreate DataWarehouse Database and Create Schema Layers
  Author        : Muhammad Tajammal Khalid
- Purpose       : 
-    - Check if the "DataWarehouse" database exists
-    - If exists → Force drop it safely (rollback any open transactions)
-    - Create a fresh "DataWarehouse" database
-    - Create bronze, silver, gold schema layers for Data Warehouse architecture
- Environment   : SQL Server
+PURPOSE:
+    - Drop existing DataWarehouse database (if it exists)
+    - Create a fresh DataWarehouse database
+    - Create standardized schema layers: bronze, silver, gold
+    - Used for Data Warehouse architecture setup
+
+ ⚠️ WARNING:
+    - This script will permanently DROP the existing DataWarehouse database.
+    - All data will be lost and cannot be recovered!
+    - Ensure you have proper backups before running this script in Production.
  Date Created  : <27/11/2025>
 ***********************************************************************************************/
 
